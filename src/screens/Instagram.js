@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Instagram() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>MainScreen Page</Text>
+      <Text style={styles.text}>Instagram Page</Text>
     </View>
   );
 }
