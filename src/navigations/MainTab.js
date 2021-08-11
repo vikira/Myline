@@ -14,22 +14,41 @@ const TabIcon = ({ name, size, color }) => {
 const MainTab = () => {
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: (props) => {
-          let name = '';
-          if (route.name === 'Mainscreen') name = 'home-variant-outline';
-          else if (route.name === 'Mypage') name = 'account-circle-outline';
-          else name = 'instagram';
-          return TabIcon({ ...props, name });
-        },
+      screenOptions={{
         tabBarActiveBackgroundColor: 'pink', //터치시 배경
         tabBarActiveTintColor: 'black', //터치시 글자색
         tabBarInactiveTintColor: 'black', //비터치시 글자색
-      })}
+      }}
     >
-      <Tab.Screen name="Mainscreen" component={Mainscreen} />
-      <Tab.Screen name="Mypage" component={Mypage} />
-      <Tab.Screen name="Instagram" component={Instagram} />
+      <Tab.Screen
+        name="Mainscreen"
+        component={Mainscreen}
+        options={{
+          tabBarIcon: (props) =>
+            TabIcon({
+              ...props,
+              name: props.focused ? 'home-variant' : 'home-variant-outline',
+            }),
+        }}
+      />
+      <Tab.Screen
+        name="Mypage"
+        component={Mypage}
+        options={{
+          tabBarIcon: (props) =>
+            TabIcon({
+              ...props,
+              name: props.focused ? 'account-circle' : 'account-circle-outline',
+            }),
+        }}
+      />
+      <Tab.Screen
+        name="Instagram"
+        component={Instagram}
+        options={{
+          tabBarIcon: (props) => TabIcon({ ...props, name: 'instagram' }),
+        }}
+      />
     </Tab.Navigator>
   );
 };
