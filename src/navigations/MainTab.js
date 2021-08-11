@@ -5,11 +5,11 @@ import Mainscreen from '../screens/Mainscreen';
 import Mypage from '../screens/Mypage';
 import Instagram from '../screens/Instagram';
 
+const Tab = createBottomTabNavigator();
+
 const TabIcon = ({ name, size, color }) => {
   return <MaterialCommunityIcons name={name} size={size} color={color} />;
 };
-
-const Tab = createBottomTabNavigator();
 
 const MainTab = () => {
   return (
@@ -22,6 +22,9 @@ const MainTab = () => {
           else name = 'instagram';
           return TabIcon({ ...props, name });
         },
+        tabBarActiveBackgroundColor: 'pink', //터치시 배경
+        tabBarActiveTintColor: 'black', //터치시 글자색
+        tabBarInactiveTintColor: 'black', //비터치시 글자색
       })}
     >
       <Tab.Screen name="Mainscreen" component={Mainscreen} />
