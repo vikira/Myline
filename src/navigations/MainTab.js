@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Mainscreen from '../screens/Mainscreen';
 import Mypage from '../screens/Mypage';
-import Instagram from '../screens/Instagram';
+import InstaDrawer from './InstaDrawer';
+// import Instagram from '../screens/Instagram';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,8 +44,8 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Instagram"
-        component={Instagram}
+        name="InstagramD"
+        component={InstaDrawer}
         options={{
           tabBarIcon: (props) => TabIcon({ ...props, name: 'instagram' }),
         }}
