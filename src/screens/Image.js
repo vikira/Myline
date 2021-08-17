@@ -1,14 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function Mypage({ navigation }) {
+export default function Image() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Mypage Page</Text>
-      <Button
-        title="go to Image page"
-        onPress={() => navigation.navigate('Image')}
-      />
+      <Text style={styles.text}>Image Page</Text>
     </View>
   );
 }
