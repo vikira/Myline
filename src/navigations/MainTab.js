@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Mainscreen from '../screens/Mainscreen';
 import Mypage from '../screens/Mypage';
 import InstaDrawer from './InstaDrawer';
+import MainscreenStack from './MainscreenStack';
 // import Instagram from '../screens/Instagram';
 
 const Tab = createBottomTabNavigator();
@@ -19,11 +19,12 @@ const MainTab = () => {
         tabBarActiveBackgroundColor: 'pink', //터치시 배경
         tabBarActiveTintColor: 'black', //터치시 글자색
         tabBarInactiveTintColor: 'black', //비터치시 글자색
+        headerTitleAlign: 'center', //헤더 타이틀 가운데정렬
       }}
     >
       <Tab.Screen
         name="Mainscreen"
-        component={Mainscreen}
+        component={MainscreenStack}
         options={{
           tabBarIcon: (props) =>
             TabIcon({
@@ -47,6 +48,7 @@ const MainTab = () => {
         name="InstagramD"
         component={InstaDrawer}
         options={{
+          headerShown: false,
           tabBarIcon: (props) => TabIcon({ ...props, name: 'instagram' }),
         }}
       />

@@ -1,14 +1,10 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default function Mainscreen({ navigation }) {
+export default function Result() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>MainScreen Page</Text>
-      <Button
-        title="go to Result page"
-        onPress={() => navigation.navigate('Result')}
-      />
+      <Text style={styles.text}>Result Page</Text>
     </View>
   );
 }

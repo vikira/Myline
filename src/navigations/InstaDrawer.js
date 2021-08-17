@@ -7,7 +7,10 @@ const Drawer = createDrawerNavigator();
 
 const InstaDrawer = () => {
   return (
-    <Drawer.Navigator drawerContent={DrawerContent}>
+    <Drawer.Navigator
+      drawerContent={DrawerContent}
+      screenOptions={{ headerTitleAlign: 'center' }}
+    >
       <Drawer.Screen name="Instagram" component={Instagram} />
     </Drawer.Navigator>
   );
