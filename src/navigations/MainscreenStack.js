@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 const MainscreenStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
       <Stack.Screen name="Mainscreen" component={Mainscreen} />
       <Stack.Screen name="Result" component={Result} />
     </Stack.Navigator>

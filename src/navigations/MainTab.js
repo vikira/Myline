@@ -23,9 +23,10 @@ const MainTab = () => {
       }}
     >
       <Tab.Screen
-        name="Mainscreen"
+        name="MainscreenD"
         component={MainscreenStack}
         options={{
+          headerShown: false,
           tabBarIcon: (props) =>
             TabIcon({
               ...props,
