@@ -23,7 +23,7 @@ const MainTab = () => {
       }}
     >
       <Tab.Screen
-        name="Mainscreen"
+        name="MainscreenT"
         component={MainscreenStack}
         options={{
           tabBarIcon: (props) =>
@@ -34,7 +34,7 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Mypage"
+        name="MypageT"
         component={MypageStack}
         options={{
           tabBarIcon: (props) =>
@@ -45,7 +45,7 @@ const MainTab = () => {
         }}
       />
       <Tab.Screen
-        name="Instagram"
+        name="InstagramT"
         component={InstaDrawer}
         options={{
           tabBarIcon: (props) => TabIcon({ ...props, name: 'instagram' }),
