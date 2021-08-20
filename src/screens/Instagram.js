@@ -12,7 +12,7 @@ export default function Instagram() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'lightgreen',
     alignItems: 'center',
     justifyContent: 'center',
   },
