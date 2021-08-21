@@ -16,7 +16,7 @@ export default function Mainscreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#Feebf2',
     alignItems: 'center',
     justifyContent: 'center',
   },
