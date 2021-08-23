@@ -1,5 +1,5 @@
 import React from 'react';
-import { PickerIOSComponent, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Instagram() {
   return (
@@ -8,6 +8,10 @@ export default function Instagram() {
     </View>
   );
 }
+
+const MyText = styled.Text`
+  color: #fff;
+`;
 
 const styles = StyleSheet.create({
   container: {
